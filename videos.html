@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VortexV - Videolar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .video-item {
+            flex: 1 1 calc(50% - 10px); /* İki sütunlu yapısı için */
+            max-width: calc(50% - 10px); /* İki sütunlu yapısı için */
+            margin-bottom: 20px;
+        }
+        .video-item iframe {
+            width: 100%;
+            height: 200px; /* Örneğin 200px yükseklik */
+        }
+        @media (max-width: 768px) {
+            .video-item {
+                flex: 1 1 100%; /* Mobilde tam genişlik */
+                max-width: 100%; /* Mobilde tam genişlik */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VortexV</h1>
+    </header>
+    <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="contact.html">İletişim</a>
+        <a href="videos.html">Videolar</a>
+    </nav>
+    <section id="videos">
+        <h2>Videolar</h2>
+        <div class="video-container">
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Diğer videoları ekleyebilirsiniz -->
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Buraya kadar 20 adet video ekleyebilirsiniz -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 VortexV. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
