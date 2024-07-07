@@ -19,12 +19,12 @@
             0% { background-image: url('images/body.jpeg'); }
             33% { background-image: url('images/ani1.jpg'); }
             66% { background-image: url('images/ani2.jpg'); }
-           
+      
         }
         .top-section {
-            flex: 1; /* Üst kısmın yüksekliğini ayarlamak için flex kullan */
-            background-size: cover; /* Resmi kapla şeklinde ayarla */
-            background-position: center top; /* Resmi yatayda ortala, dikeyde en üste yerleştir */
+            height: 50vh; /* Üst kısmın yüksekliğini ayarlamak için sabit değer kullan */
+            background-size: contain; /* Resmi bölüme tam sığdır */
+            background-position: center; /* Resmi yatayda ve dikeyde ortala */
             background-repeat: no-repeat; /* Resmi tekrar etme */
             animation: changeBackground 15s infinite; /* 15 saniyede bir arka plan resmini değiştir */
         }
