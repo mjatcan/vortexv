@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VortexV - Hakkımda</title>
+    <title>Hakkımda - VortexV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #333; /* Gri arka plan rengi */
+            color: #333; /* Metin rengi */
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
+        .top-section {
+            flex: 1; /* Üst kısmın yüksekliğini ayarlamak için flex kullan */
+            background-image: url('images/about.jpg'); /* Arka plan resmi */
+            background-size: cover; /* Resmi kapla şeklinde ayarla */
+            background-position: center top; /* Resmi yatayda ortala, dikeyde en üste yerleştir */
+            background-repeat: no-repeat; /* Resmi tekrar etme */
+        }
+        .bottom-section {
+            flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullan */
+            background-color: #f5f5f5; /* Açık gri arka plan rengi */
+            padding: 20px;
         }
         nav {
+            position: fixed; /* Navigasyon menüsünü sabit konumda tut */
+            top: 0; /* Sayfanın en üstüne yerleştir */
+            left: 0;
+            width: 100%;
+            background-color: #444;
             display: flex;
             justify-content: center;
-            background-color: #444;
+            z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
         }
         nav a {
             color: #fff;
@@ -33,7 +47,8 @@
             background-color: #555;
         }
         section {
-            padding: 20px;
+            padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarla */
+            margin-top: 60px; /* Navigasyon menüsü yüksekliği kadar içerikten aşağıda başlar */
         }
         footer {
             background-color: #333;
@@ -43,23 +58,24 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+            z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarla */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>VortexV</h1>
-    </header>
     <nav>
         <a href="index.html">Anasayfa</a>
         <a href="about.html">Hakkımda</a>
         <a href="contact.html">İletişim</a>
         <a href="videos.html">Videolar</a>
     </nav>
-    <section id="about">
-        <h2>Hakkımda</h2>
-        <p>Mezun olduğum Mechatronics Engineering bölümünde çeşitli projelerde yer aldım. Yazılım geliştirme ve otomasyon sistemleri üzerine çalışmalar yapıyorum.</p>
-    </section>
+    <div class="top-section"></div>
+    <div class="bottom-section">
+        <section id="about">
+            <h2>Hakkımda</h2>
+            <p>Benimle ilgili detaylar...</p>
+        </section>
+    </div>
     <footer>
         <p>&copy; 2024 VortexV. Tüm hakları saklıdır.</p>
     </footer>
