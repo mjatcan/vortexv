@@ -15,16 +15,17 @@
             background-color: #333; /* Gri arka plan rengi */
             color: #333; /* Metin rengi */
         }
-    .top-section {
-    flex: 1;
-    background-image: url('images/ani3.jpg');
-    background-size: cover;
-    background-position: right top; /* Resmi yatayda sağa, dikeyde en üste hizala */
-    background-repeat: no-repeat;
-    position: relative;
-}
 
- .marquee {
+        .top-section {
+            flex: 1;
+            background-image: url('images/ani3.jpg');
+            background-size: cover;
+            background-position: right top; /* Resmi yatayda sağa, dikeyde en üste hizala */
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .marquee {
             position: absolute;
             bottom: 10px; /* Yazıyı resmin altından biraz yukarıda konumlandır */
             right: 0; /* Yazıyı sağa hizala */
@@ -34,22 +35,24 @@
             box-sizing: border-box;
             z-index: 10; /* Arka plan resminin altında olacak şekilde z-index ayarı */
         }
+
         .marquee span {
             display: inline-block;
             animation: marquee 10s linear infinite;
             color: #fff; /* Yazı rengi beyaz */
         }
+
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-
 
         .bottom-section {
             flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullan */
             background-color: #f5f5f5; /* Açık gri arka plan rengi */
             padding: 20px;
         }
+
         nav {
             position: fixed; /* Navigasyon menüsünü sabit konumda tut */
             top: 0; /* Sayfanın en üstüne yerleştir */
@@ -60,19 +63,23 @@
             justify-content: center;
             z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
         }
+
         nav a {
             color: #fff;
             padding: 15px 20px;
             text-decoration: none;
             text-transform: uppercase;
         }
+
         nav a:hover {
             background-color: #555;
         }
+
         section {
             padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarla */
             margin-top: 60px; /* Navigasyon menüsü yüksekliği kadar içerikten aşağıda başlar */
         }
+
         footer {
             background-color: #333;
             color: #fff;
