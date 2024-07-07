@@ -17,15 +17,15 @@
         }
         @keyframes changeBackground {
             0% { background-image: url('images/body.jpeg'); }
-            33% { background-image: url('images/ani1.jpg'); }
-            66% { background-image: url('images/ani2.jpg'); }
-      
+            33.33% { background-image: url('images/ani1.jpg'); }
+            66.66% { background-image: url('images/ani2.jpg'); }      
         }
         .top-section {
             height: 50vh; /* Üst kısmın yüksekliğini ayarlamak için sabit değer kullan */
-            background-size: cover; /* Resmi bölüme tam sığdır */
+            background-size: cover; /* Resmi genişlemesine ve yükseklik olarak tamamen kapsar */
             background-position: center; /* Resmi yatayda ve dikeyde ortala */
             background-repeat: no-repeat; /* Resmi tekrar etme */
+            background-attachment: fixed; /* Arka planı sabit tut */
             animation: changeBackground 15s infinite; /* 15 saniyede bir arka plan resmini değiştir */
         }
         .bottom-section {
