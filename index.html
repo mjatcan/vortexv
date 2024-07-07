@@ -14,11 +14,18 @@
             height: 100vh;
             background-color: #333; /* Gri arka plan rengi */
             color: #333; /* Metin rengi */
-            background-image: url('images/ani3.jpg'); /* Sabit arka plan resmi */
+        }
+        @keyframes changeBackground {
+            33.6% { background-image: url('images/ani3.jpg'); }
+            66.4% { background-image: url('images/ani3.jpg'); }      
+        }
+        .top-section {
+            height: 60vh; /* Üst kısmın yüksekliğini ayarlamak için sabit değer kullan */
             background-size: cover; /* Resmi genişlemesine ve yükseklik olarak tamamen kapsar */
             background-position: center; /* Resmi yatay ve dikeyde ortala */
             background-repeat: no-repeat; /* Resmi tekrar etmez */
             background-attachment: fixed; /* Arka planı sabit tutar */
+            animation: changeBackground 15s infinite; /* 15 saniyede bir arka plan resmini değiştirir */
         }
         .bottom-section {
             flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullanır */
@@ -58,7 +65,7 @@
             bottom: 0;
             z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarlar */
         }
-    </style>    
+    </style>
 </head>
 <body>
     <nav>
@@ -67,6 +74,7 @@
         <a href="contact.html">İletişim</a>
         <a href="videos.html">Videolar</a>
     </nav>
+    <div class="top-section"></div>
     <div class="bottom-section">
         <section id="home">
             <h2>Anasayfa</h2>
@@ -77,4 +85,4 @@
         <p>&copy; 2024 VortexV. Tüm hakları saklıdır.</p>
     </footer>
 </body>
-</html>
+</html> 2.jpg ani3.jpg gözüktükten sonra boş bir alan çıkıyor o neden çıkıyor çıkmasın
