@@ -14,20 +14,11 @@
             height: 100vh;
             background-color: #333; /* Gri arka plan rengi */
             color: #333; /* Metin rengi */
-        }
-        @keyframes changeBackground {
-              0% { background-image: url('images/x1.jpg'); }
-             50% { background-image: url('images/x1.jpg'); }
-             50.1% { background-image: url('images/ani3.jpg'); }
-            100% { background-image: url('images/ani3.jpg'); } 
-        }
-        .top-section {
-            height: 60vh; /* Üst kısmın yüksekliğini ayarlamak için sabit değer kullan */
+            background-image: url('images/ani3.jpg'); /* Sabit arka plan resmi */
             background-size: cover; /* Resmi genişlemesine ve yükseklik olarak tamamen kapsar */
             background-position: center; /* Resmi yatay ve dikeyde ortala */
             background-repeat: no-repeat; /* Resmi tekrar etmez */
             background-attachment: fixed; /* Arka planı sabit tutar */
-            animation: changeBackground 15s infinite; /* 15 saniyede bir arka plan resmini değiştirir */
         }
         .bottom-section {
             flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullanır */
@@ -76,7 +67,6 @@
         <a href="contact.html">İletişim</a>
         <a href="videos.html">Videolar</a>
     </nav>
-    <div class="top-section"></div>
     <div class="bottom-section">
         <section id="home">
             <h2>Anasayfa</h2>
