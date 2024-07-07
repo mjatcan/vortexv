@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anasayfa - VortexV</title>
     <style>
-        /* Genel stil tanımları */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,6 +15,7 @@
             background-color: #333; /* Gri arka plan rengi */
             color: #333; /* Metin rengi */
         }
+
         .top-section {
             flex: 1;
             background-image: url('images/ani3.jpg');
@@ -24,6 +24,7 @@
             background-repeat: no-repeat;
             position: relative;
         }
+
         .marquee {
             position: absolute;
             bottom: 10px; /* Yazıyı resmin altından biraz yukarıda konumlandır */
@@ -34,48 +35,51 @@
             box-sizing: border-box;
             z-index: 10; /* Arka plan resminin altında olacak şekilde z-index ayarı */
         }
+
         .marquee span {
             display: inline-block;
             animation: marquee 10s linear infinite;
             color: #fff; /* Yazı rengi beyaz */
         }
+
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
         .bottom-section {
-            flex: 1;
-            background-color: #f5f5f5;
+            flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullan */
+            background-color: #f5f5f5; /* Açık gri arka plan rengi */
             padding: 20px;
         }
+
         nav {
-            position: fixed;
-            top: 0;
+            position: fixed; /* Navigasyon menüsünü sabit konumda tut */
+            top: 0; /* Sayfanın en üstüne yerleştir */
             left: 0;
             width: 100%;
             background-color: #444;
             display: flex;
             justify-content: center;
-            z-index: 1000;
-            transform: translateY(-100%); /* Başlangıçta menünün ekranın üstünde gizli olmasını sağlar */
-            transition: transform 0.3s ease; /* Yumuşak geçiş efekti ekler */
+            z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
         }
-        nav.open {
-            transform: translateY(0); /* Menü açılınca ekranın üstüne kaydırır */
-        }
+
         nav a {
             color: #fff;
             padding: 15px 20px;
             text-decoration: none;
             text-transform: uppercase;
         }
+
         nav a:hover {
             background-color: #555;
         }
+
         section {
-            padding: 20px;
-            margin-top: 60px;
+            padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarla */
+            margin-top: 60px; /* Navigasyon menüsü yüksekliği kadar içerikten aşağıda başlar */
         }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -84,20 +88,7 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-            z-index: 1000;
-        }
-
-        /* Küçük ekranlar için medya sorgusu */
-        @media only screen and (max-width: 600px) {
-            nav {
-                flex-direction: column; /* Menüyü dikey hizalamak için */
-                align-items: center; /* Ortalamak için */
-                justify-content: flex-start; /* Başlangıçta ekranın üstünde gizli olmasını sağlar */
-                height: 100vh; /* Ekran yüksekliği kadar ayarla */
-            }
-            nav a {
-                margin-top: 20px; /* Menü bağlantılarını birbirinden ayırmak için */
-            }
+            z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarla */
         }
     </style>
 </head>
@@ -122,12 +113,5 @@
     <footer>
         <p>&copy; 2024 VortexV. Tüm hakları saklıdır.</p>
     </footer>
-    <script>
-        // Menüyü açma ve kapama işlevi eklemek için JavaScript kullanımı
-        const navToggle = document.querySelector('nav');
-        document.querySelector('button').addEventListener('click', () => {
-            navToggle.classList.toggle('open');
-        });
-    </script>
 </body>
 </html>
