@@ -38,12 +38,9 @@
             text-align: center;
             z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
         }
-        header h1 {
-            margin-bottom: 20px; /* VortexV yazısının altında boşluk bırak */
-        }
         nav {
             position: fixed; /* Navigasyon menüsünü sabit konumda tut */
-            top: 100px; /* Header ve VortexV yazısının altından başlasın */
+            top: 60px; /* Header'ın altından başlasın */
             width: 100%;
             background-color: #444;
             display: flex;
@@ -76,7 +73,7 @@
 </head>
 <body>
     <header>
-        <h1>VortexV</h1>
+        <h1 style="margin-bottom: 0;">VortexV</h1>
     </header>
     <nav>
         <a href="index.html">Anasayfa</a>
