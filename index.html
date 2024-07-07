@@ -60,23 +60,8 @@
             width: 100%;
             background-color: #444;
             display: flex;
-            justify-content: space-between; /* Menü bağlantılarını sağa ve sola hizalamak için */
-            align-items: center; /* Dikey hizalamayı sağlamak için */
+            justify-content: center;
             z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
-            padding: 10px 20px; /* Kenar boşlukları */
-        }
-
-        .menu-toggle {
-            display: none; /* Başlangıçta hamburger menüyü gizle */
-            cursor: pointer;
-        }
-
-        .menu-toggle .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-            margin: 5px 0;
-            transition: 0.4s;
         }
 
         nav a {
@@ -105,73 +90,14 @@
             bottom: 0;
             z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarla */
         }
-
-        /* Media Query for Mobile */
-        @media screen and (max-width: 768px) {
-            .menu-toggle {
-                display: block; /* Mobil görünümde hamburger menüyü göster */
-            }
-
-            nav {
-                flex-direction: column; /* Mobilde menü bağlantılarını dikey olarak düzenle */
-                align-items: flex-start; /* Dikey hizalamayı sola hizala */
-                height: auto; /* Yüksekliği otomatik olarak ayarla */
-                padding: 20px 10px; /* Kenar boşlukları */
-                display: none; /* Başlangıçta menü bağlantılarını gizle */
-                position: absolute; /* Mutlaka sabit kalması sağlanmıştır */
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: #444;
-                z-index: 999; /* İçeriklere üstünlük sağlanmıştır */
-            }
-
-            .menu-toggle.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .menu-toggle.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .menu-toggle.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            nav.open {
-                display: flex; /* Mobil menüsünü gosterir */
-            }
-
-            nav.open .menu-items {
-                flex-direction: column;
-                align-items: center;
-                height: 100vh;
-                padding-top: 50px; /* Ağ menüsü bağlantılarından yukarıda görüntülenme işlemi */
-            }
-
-            nav.open .menu-items a {
-                padding: 15px 20px;
-                text-align: center;
-                text-decoration: none;
-                color: #fff;
-                display: block;
-            }
-        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="menu-items">
-            <a href="index.html">Anasayfa</a>
-            <a href="about.html">Hakkımda</a>
-            <a href="contact.html">İletişim</a>
-            <a href="videos.html">Videolar</a>
-        </div>
+        <a href="index.html">Anasayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="contact.html">İletişim</a>
+        <a href="videos.html">Videolar</a>
     </nav>
     <div class="top-section">
         <div class="marquee">
@@ -187,14 +113,5 @@
     <footer>
         <p>&copy; 2024 VortexV. Tüm hakları saklıdır.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            var menuToggle = document.querySelector('.menu-toggle');
-            var menuItems = document.querySelector('.menu-items');
-            menuToggle.classList.toggle('active');
-            menuItems.classList.toggle('open');
-        }
-    </script>
 </body>
 </html>
