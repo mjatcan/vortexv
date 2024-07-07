@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasayfa - VortexV</title>
+    <title>VortexV - Anasayfa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,26 +14,41 @@
             height: 100vh;
             background-color: #333; /* Gri arka plan rengi */
             color: #333; /* Metin rengi */
-           background-image: url('images/ani3.jpg'); /* Sabit arka plan resmi */
-            background-size: cover; /* Resmi genişlemesine ve yükseklik olarak tamamen kapsar */
-            background-position: center; /* Resmi yatay ve dikeyde ortala */
-            background-repeat: no-repeat; /* Resmi tekrar etmez */
-            background-attachment: fixed; /* Arka planı sabit tutar */
+        }
+        .top-section {
+            flex: 1; /* Üst kısmın yüksekliğini ayarlamak için flex kullan */
+            background-image: url('images/ani3.jpg'); /* Arka plan resmi */
+            background-size: cover; /* Resmi kapla şeklinde ayarla */
+            background-position: center top; /* Resmi yatayda ortala, dikeyde en üste yerleştir */
+            background-repeat: no-repeat; /* Resmi tekrar etme */
         }
         .bottom-section {
-            flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullanır */
+            flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullan */
             background-color: #f5f5f5; /* Açık gri arka plan rengi */
             padding: 20px;
         }
-        nav {
-            position: fixed; /* Navigasyon menüsünü sabit konumda tutar */
-            top: 0; /* Sayfanın en üstünde yerleştirir */
+        header {
+            position: fixed; /* Header'ı sabit konumda tut */
+            top: 0; /* Sayfanın en üstüne yerleştir */
             left: 0;
+            width: 100%;
+            background-color: #333; /* Gri arka plan rengi */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
+        }
+        header h1 {
+            margin-bottom: 20px; /* VortexV yazısının altında boşluk bırak */
+        }
+        nav {
+            position: fixed; /* Navigasyon menüsünü sabit konumda tut */
+            top: 100px; /* Header ve VortexV yazısının altından başlasın */
             width: 100%;
             background-color: #444;
             display: flex;
             justify-content: center;
-            z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
+            z-index: 1000; /* Header ile aynı z-index değerini veriyoruz */
         }
         nav a {
             color: #fff;
@@ -45,8 +60,7 @@
             background-color: #555;
         }
         section {
-            padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarlar */
-            margin-top: 100px; /* Navigasyon menüsü yüksekliği kadar içerikten aşağıda başlar */
+            padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarla */
         }
         footer {
             background-color: #333;
@@ -56,17 +70,21 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-            z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarlar */
+            z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarla */
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>VortexV</h1>
+    </header>
     <nav>
         <a href="index.html">Anasayfa</a>
         <a href="about.html">Hakkımda</a>
         <a href="contact.html">İletişim</a>
         <a href="videos.html">Videolar</a>
     </nav>
+    <div class="top-section"></div>
     <div class="bottom-section">
         <section id="home">
             <h2>Anasayfa</h2>
