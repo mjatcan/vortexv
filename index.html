@@ -15,36 +15,34 @@
             background-color: #333; /* Gri arka plan rengi */
             color: #333; /* Metin rengi */
         }
-        .top-section {
-            flex: 1; /* Üst kısmın yüksekliğini ayarlamak için flex kullan */
-            background-image: url('images/ani3.jpg'); /* Arka plan resmi */
-            background-size: cover; /* Resmi kapla şeklinde ayarla */
-            background-position: center top; /* Resmi yatayda ortala, dikeyde en üste yerleştir */
-            background-repeat: no-repeat; /* Resmi tekrar etme */
-            position: relative; /* Hareketli yazıyı konumlandırmak için relative kullan */
+    .top-section {
+    flex: 1;
+    background-image: url('images/ani3.jpg');
+    background-size: cover;
+    background-position: right top; /* Resmi yatayda sağa, dikeyde en üste hizala */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+ .marquee {
+            position: absolute;
+            bottom: 10px; /* Yazıyı resmin altından biraz yukarıda konumlandır */
+            right: 0; /* Yazıyı sağa hizala */
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            z-index: 10; /* Arka plan resminin altında olacak şekilde z-index ayarı */
         }
-.marquee {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateX(100%);
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-.marquee span {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
-    color: red; /* Yazı rengini kırmızı yap */
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
+        .marquee span {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+            color: #fff; /* Yazı rengi beyaz */
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
 
 
         .bottom-section {
