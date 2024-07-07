@@ -24,14 +24,14 @@
             position: relative; /* Hareketli yazıyı konumlandırmak için relative kullan */
         }
      .marquee {
-    position: absolute; /* Elementin konumunu mutlak yapın */
-    bottom: 0; /* Resmin altında 0px mesafede baslasin */
-    right: 0; /* Yazıyı sayfanın en sağından başlat */
+    position: absolute;
+    bottom: 0;
+    right: -100%; /* Yazıyı sayfanın en sağ dışından başlat */
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
-    z-index: 10; /* Arka plan resminin altında olacak şekilde z-index ayarı */
+    z-index: 10;
 }
 
 .marquee span {
