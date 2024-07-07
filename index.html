@@ -23,16 +23,40 @@
             background-repeat: no-repeat; /* Resmi tekrar etme */
             position: relative; /* Hareketli yazıyı konumlandırmak için relative kullan */
         }
-     .marquee {
+.marquee {
     position: absolute;
     bottom: 0;
-    right: -100%; /* Yazıyı sayfanın en sağ dışından başlat */
+    right: 0;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
     z-index: 10;
 }
+
+.marquee span {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    color: #fff;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.marquee span {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    color: #fff;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); } /* Başlangıç: Yazıyı %100 sağa çevir */
+    100% { transform: translateX(-100%); } /* Bitiş: Yazıyı %100 sola çevir */
+}
+
 
 .marquee span {
     display: inline-block;
