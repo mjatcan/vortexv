@@ -23,8 +23,8 @@
             background-repeat: no-repeat; /* Resmi tekrar etme */
             position: relative; /* Hareketli yazıyı konumlandırmak için relative kullan */
         }
-       .marquee {
-    position: absolute; /* Mutlaka bu elementin konumunu mutlak yapmanız gerekmekte */
+     .marquee {
+    position: absolute; /* Elementin konumunu mutlak yapın */
     bottom: 0; /* Resmin altında 0px mesafede baslasin */
     right: 0; /* Yazıyı sayfanın en sağından başlat */
     width: 100%;
@@ -44,6 +44,7 @@
     0% { transform: translateX(100%); } /* Başlangıç: Yazıyı %100 sağa çevir */
     100% { transform: translateX(-100%); } /* Bitiş: Yazıyı %100 sola çevir */
 }
+
 
 
         .bottom-section {
