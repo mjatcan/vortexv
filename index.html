@@ -16,32 +16,31 @@
             color: #333; /* Metin rengi */
         }
         @keyframes changeBackground {
-          
-            33.6% { background-image: url('images/2.jpg'); }
-            66.4% { background-image: url('images/ani3.jpg'); }      
+            33.6% { background-size: 110% auto; }
+            66.4% { background-size: 120% auto; }      
         }
         .top-section {
             height: 60vh; /* Üst kısmın yüksekliğini ayarlamak için sabit değer kullan */
-            background-size: cover; /* Resmi genişlemesine ve yükseklik olarak tamamen kapsar */
-            background-position: center; /* Resmi yatayda ve dikeyde ortala */
-            background-repeat: no-repeat; /* Resmi tekrar etme */
-            background-attachment: fixed; /* Arka planı sabit tut */
-            animation: changeBackground 15s infinite; /* 15 saniyede bir arka plan resmini değiştir */
+            background-size: 100% auto; /* Genişlik %100, yükseklik otomatik olarak tam olarak kaplar */
+            background-position: center; /* Resmi yatay ve dikeyde ortala */
+            background-repeat: no-repeat; /* Resmi tekrar etmez */
+            background-attachment: fixed; /* Arka planı sabit tutar */
+            animation: changeBackground 15s infinite; /* 15 saniyede bir arka plan resmini değiştirir */
         }
         .bottom-section {
-            flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullan */
+            flex: 1; /* Alt kısmın yüksekliğini ayarlamak için flex kullanır */
             background-color: #f5f5f5; /* Açık gri arka plan rengi */
             padding: 20px;
         }
         nav {
-            position: fixed; /* Navigasyon menüsünü sabit konumda tut */
-            top: 0; /* Sayfanın en üstünde yerleştir */
+            position: fixed; /* Navigasyon menüsünü sabit konumda tutar */
+            top: 0; /* Sayfanın en üstünde yerleştirir */
             left: 0;
             width: 100%;
             background-color: #444;
             display: flex;
             justify-content: center;
-            z-index: 1000; /* Header ile aynı z-index değerini veriyoruz */
+            z-index: 1000; /* Diğer elementlerden üstte görünmesi için z-index değeri */
         }
         nav a {
             color: #fff;
@@ -53,8 +52,8 @@
             background-color: #555;
         }
         section {
-            padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarla */
-            margin-top: 100px; /* Navigasyon menüsü yüksekliği kadar içerikten aşağıda başlasın */
+            padding: 20px; /* İçeriklerin header ve nav'ın altında kalmasını sağlamak için padding ayarlar */
+            margin-top: 100px; /* Navigasyon menüsü yüksekliği kadar içerikten aşağıda başlar */
         }
         footer {
             background-color: #333;
@@ -64,7 +63,7 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-            z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarla */
+            z-index: 1000; /* Footer'ı diğer içeriklerin üstünde tutmak için z-index ayarlar */
         }
     </style>
 </head>
@@ -81,9 +80,4 @@
             <h2>Anasayfa</h2>
             <p>VortexV'e hoş geldiniz. Burada kişisel projelerim ve ilgi alanlarım hakkında bilgi bulabilirsiniz.</p>
         </section>
-    </div>
-    <footer>
-        <p>&copy; 2024 VortexV. Tüm hakları saklıdır.</p>
-    </footer>
-</body>
-</html>
+ 
